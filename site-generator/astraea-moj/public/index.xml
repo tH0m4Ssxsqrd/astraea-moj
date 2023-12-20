@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Astraea-MOJ</title>
+    <link>https://astraea.squaredfield.com/</link>
+    <description>Recent content in Home on Astraea-MOJ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://astraea.squaredfield.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contest Page</title>
+      <link>https://astraea.squaredfield.com/contest/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://astraea.squaredfield.com/contest/</guid>
+      <description>$NAME em $CLASS $TASK Problemas: A - Testa Primo B - Exponenciação Modular Enviar solução: python javascript rust java c cpp kotlin riscv </description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://astraea.squaredfield.com/faq/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://astraea.squaredfield.com/faq/</guid>
+      <description>Q: What programming language? A: Check the problem&amp;rsquo;s statement for the name of the expected file. If the file ends in .c, it is C. If the file stem is .cpp, then it&amp;rsquo;s C++, and so on and so forth. Q: I&amp;rsquo;m getting a &amp;ldquo;Runtime Error&amp;rdquo; result from the judge. A: A common cause for that is forgetting to return 0 at the end of your main function. Online judges check if your program finished successfully, and a return different from 0 means an error ocurred.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://astraea.squaredfield.com/about/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://astraea.squaredfield.com/about/</guid>
+      <description>What is this fork? The goal: CD-MOJ is going to be a complete rewrite of original CD-MOJ, that is supposed to retain utilization compatibility with the original project as much as possible. That means the way contests are created should be virtually the same, and the external APIs should work the same, say for the MOJinho bot that is able to retrieve information from the running instance.
+What can be improved with this fork: There are a few points that I believe can receive improvements, so I&amp;rsquo;ll list a few:</description>
+    </item>
+    
+  </channel>
+</rss>

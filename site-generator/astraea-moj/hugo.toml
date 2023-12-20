@@ -1,0 +1,55 @@
+baseURL = 'https://astraea.squaredfield.com/'
+languageCode = 'en-us'
+title = 'Astraea-MOJ'
+author = "Thomas Q"
+
+theme = 'hugo-theme-monochrome'
+
+[markup.highlight]
+codeFences = true
+lineNos = true
+
+[params]
+navbar_title = "Astraea-MOJ"
+footer = "Copyright © 2023 by tH0m4Ssxsqrd"
+enable_toc = true
+author = "thomasq"
+color_scheme = "dark"
+
+[params.about]
+title = "Astraea-MOJ"
+description = "Virtual Judge, rewriten"
+
+[params.syntax_highlight]
+  lib = "prism.js"
+    [params.syntax_highlight.prism]
+    enable_code_copy = false
+    enable_line_no = true
+
+[[menu.navbar]]
+identifier = "home"
+name = "Home"
+title = "Home"
+url = "/"
+weight = -100
+
+[[menu.navbar]]
+identifier = "about"
+name = "About"
+title = "About"
+url = "/about/"
+weight = -99
+
+[[menu.navbar]]
+identifier = "faq"
+name = "FAQ"
+title = "FAQ"
+url = "/faq/"
+weight = -98
+
+[[menu.navbar]]
+identifier = "maratona-de-programacao"
+name = "Maratona de Programação"
+title = "Maratona de Programação"
+url = "https://maratona.sbc.org.br/"
+weight = 100
