@@ -179,16 +179,16 @@ form {
 
 <div class="form-container">
 <form>
-    <input class="chosen-value" type="text" value="" placeholder="Type to filter">
+    <input class="chosen-value" type="text" value="rust" placeholder="Type to filter">
     <ul class="value-list">
-      <li>python</li>
-      <li>javascript</li>
-      <li>rust</li>
-      <li>java</li>
       <li>c</li>
       <li>cpp</li>
+      <li>java</li>
+      <li>javascript</li>
       <li>kotlin</li>
+      <li>python</li>
       <li>riscv</li>
+      <li>rust</li>
     </ul>
   </form>
 </div>
@@ -240,13 +240,20 @@ form {
     const dropdown = document.querySelector('.value-list');
     const dropdownArray = [...document.querySelectorAll('li')];
     console.log(typeof dropdownArray);
-    dropdown.classList.add('open');
     inputField.focus(); // Demo purposes only
     let valueArray = [];
     dropdownArray.forEach(item => {
       valueArray.push(item.textContent);
     });
-  
+
+    inputField.addEventListener('focus', () => {
+    inputField.placeholder = 'Type to filter';
+    dropdown.classList.add('open');
+    dropdownArray.forEach(dropdown => {
+      dropdown.classList.remove('closed');
+    });
+    });
+
     const closeDropdown = () => {
       dropdown.classList.remove('open');
     }
