@@ -1,310 +1,341 @@
 <style>
 
 .form-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 form {
-  position: relative;
-  width: 18rem;
-  z-index: 5;
-  right: 5px;
+	position: relative;
+	width: 18rem;
+	z-index: 5;
+	right: 5px;
 }
 
-.chosen-value,
+#taskForm {
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+.select-value,
 .value-list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
-.chosen-value {
-  font-family: monospace;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 4px;
-  height: 4rem;
-  font-size: 1.1rem;
-  background-color: #1e1e1e;
-  transition: .3s ease-in-out;
-  position: inherit;
-  text-align: center;
-  border-radius: 5px;
-  top: -5px;
-  
-  &::-webkit-input-placeholder {
-    color: #333;
-  }
-  
-  &:hover {
-    background-color: #2d2d2d;
-    cursor: pointer;
-    
-    &::-webkit-input-placeholder {
-      color: #333;
-    }
-  }
-  
-  &:focus,
-  &.open {
-    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2);
-    outline: 0;
-    background-color: #2d2d2d;
-    color: #ededed9b;
-    
-    &::-webkit-input-placeholder {
-      color: #000;
-    }
-  }
+.select-value {
+	font-family: monospace;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 4px;
+	height: 4rem;
+	font-size: 1.1rem;
+	background-color: #1e1e1e;
+	transition: .3s ease-in-out;
+	position: inherit;
+	text-align: center;
+	border-radius: 5px;
+	top: -5px;
+	
+	&::-webkit-input-placeholder {
+		color: #333;
+	}
+	
+	&:hover {
+		background-color: #2d2d2d;
+		cursor: pointer;
+		
+		&::-webkit-input-placeholder {
+			color: #333;
+		}
+	}
+	
+	&:focus,
+	&.open {
+		box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2);
+		outline: 0;
+		background-color: #2d2d2d;
+		color: #ededed9b;
+		
+		&::-webkit-input-placeholder {
+			color: #000;
+		}
+	}
 }
 
 .value-list {
-  list-style: none;
-  margin-top: 5rem;
-  overflow: hidden;
-  max-height: 0;
-  transition: .3s ease-in-out;
-  margin-left: -1rem;
-  
-  &.open {
-   max-height: 320px;
-   overflow: auto;
-  }
-  
-  li {
-    position: relative;
-    height: 4rem;
-    background-color: #1e1e1e;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color .3s;
-    opacity: 1;
-    
-    &:hover {
-      background-color: #FF908B;
-    }
-    
-    &.closed {
-      max-height: 0;
-      overflow: hidden;
-      padding: 0;
-      opacity: 0;
-    }
-  }
+	list-style: none;
+	margin-top: 5rem;
+	overflow: hidden;
+	max-height: 0;
+	transition: .3s ease-in-out;
+	margin-left: -1rem;
+	
+	&.open {
+	 max-height: 320px;
+	 overflow: auto;
+	}
+	
+	li {
+		position: relative;
+		height: 4rem;
+		background-color: #1e1e1e;
+		font-size: 1.1rem;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: background-color .3s;
+		opacity: 1;
+		
+		&:hover {
+			background-color: #FF908B;
+		}
+		
+		&.closed {
+			max-height: 0;
+			overflow: hidden;
+			padding: 0;
+			opacity: 0;
+		}
+	}
 }
 
-    .grid-container {
-        display: grid;
-        grid-template-areas: "editor";
-        gap: 10px;
-        position: relative;
-        height: auto;
-        min-height: 30vh;
-    }
+		.grid-container {
+				display: grid;
+				grid-template-areas: "editor";
+				gap: 10px;
+				position: relative;
+				height: auto;
+				min-height: 30vh;
+		}
 
-    .editor {
-        grid-area: editor;
-        border: none;
-        color: transparent;
-        height: 100%;
-        margin: 0;
-        position: relative;
-        z-index: 1;
-        font-family: monospace;
-        line-height: 1.5;
-        word-wrap: normal;
-        word-spacing: normal;
-        word-break: normal;
-        tab-size: 4;
-    }
+		.editor {
+				grid-area: editor;
+				border: none;
+				color: transparent;
+				height: 100%;
+				margin: 0;
+				position: relative;
+				z-index: 1;
+				font-family: monospace;
+				line-height: 1.5;
+				word-wrap: normal;
+				word-spacing: normal;
+				word-break: normal;
+				tab-size: 4;
+		}
 
-    #code-editor,
-    #code-output {
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        overflow-y: auto;
-        white-space: pre-wrap;
-    }
+		#code-editor,
+		#code-output {
+				width: 100%;
+				height: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				overflow-y: auto;
+				white-space: pre-wrap;
+		}
 
-    #code-editor {
-        background-color: transparent; /* Make it transparent */
-        border: none;
-        color: transparent; /* Make text transparent */
-        caret-color: white; /* Set caret color to white */
-        display: inline-block;
-    }
+		#code-editor {
+				background-color: transparent; /* Make it transparent */
+				border: none;
+				color: transparent; /* Make text transparent */
+				caret-color: white; /* Set caret color to white */
+				display: inline-block;
+				outline: transparent;
+		}
 
-    #code-output {
-        background-color: #1f1f1f;
-        color: white;
-        position: absolute;
-        top: -22px;
-        left: 0;
-        z-index: -1;
-        font-family: monospace;
-    }
+		#code-output {
+				background-color: #1f1f1f;
+				color: white;
+				position: absolute;
+				top: -22px;
+				left: 0;
+				z-index: -1;
+				font-family: monospace;
+		}
 
-    .value-list li {
-    position: relative;
-    height: 4rem;
-    background-color: #1e1e1e;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;    cursor: pointer;
-    transition: background-color .3s;
-    opacity: 1;
-    text-align: center;
-    border-radius: 5px;
+		.value-list li {
+		position: relative;
+		height: 4rem;
+		background-color: #1e1e1e;
+		font-size: 1.1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;    cursor: pointer;
+		transition: background-color .3s;
+		opacity: 1;
+		text-align: center;
+		border-radius: 5px;
 
-    &:hover {
-      background-color: #FF908B;
-    }
+		&:hover {
+			background-color: #FF908B;
+		}
 
-    &.closed {
-      max-height: 0;
-      overflow: hidden;
-      padding: 0;
-      opacity: 0;
-    }
-    }
+		&.closed {
+			max-height: 0;
+			overflow: hidden;
+			padding: 0;
+			opacity: 0;
+		}
+		}
 </style>
 
 <div class="form-container">
-<form>
-    <input class="chosen-value" type="text" value="rust" placeholder="Type to filter">
-    <ul class="value-list">
-      <li>c</li>
-      <li>cpp</li>
-      <li>java</li>
-      <li>javascript</li>
-      <li>kotlin</li>
-      <li>python</li>
-      <li>riscv</li>
-      <li>rust</li>
-    </ul>
-  </form>
+
+	<form id = taskForm>
+		<input class="select-value" type="text" value="A" placeholder="Type to filter">
+		<ul class="value-list">
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+			<li>D</li>
+			<li>F</li>
+			<li>G</li>
+			<li>H</li>
+			<li>I</li>
+		</ul>
+	</form>
+
+<form id = languageForm>
+		<input class="select-value" type="text" value="rust" placeholder="Type to filter">
+		<ul class="value-list">
+			<li>c</li>
+			<li>cpp</li>
+			<li>java</li>
+			<li>javascript</li>
+			<li>kotlin</li>
+			<li>python</li>
+			<li>riscv</li>
+			<li>rust</li>
+		</ul>
+	</form>
 </div>
 
 <div class="grid-container">
-    <div class="editor">
-        <div id="code-editor" contenteditable="true" spellcheck="false"></div>
-        <pre id="code-output" class="language-javascript"></pre>
-    </div>
+		<div class="editor">
+				<div id="code-editor" contenteditable="true" spellcheck="false"></div>
+				<pre id="code-output" class="language-javascript"></pre>
+		</div>
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var codeEditor = document.getElementById('code-editor');
-      var codeOutput = document.getElementById('code-output');
+document.addEventListener('DOMContentLoaded', function () {
+var codeEditor = document.getElementById('code-editor');
+var codeOutput = document.getElementById('code-output');
 
-      // Function to update highlighted code
-      var updateCode = function () {
-        var language = document.querySelector('.chosen-value').value.toLowerCase();
-        var code = codeEditor.innerText;
-  
-        // Highlight code using Prism or any other syntax highlighter
-        codeOutput.innerHTML = Prism.highlight(code, Prism.languages[language], language);
-      };
-  
-      // Event listener for code editor
-      codeEditor.addEventListener('input', updateCode);
-  
-      // Event listener for handling tab key
-      codeEditor.addEventListener('keydown', function (e) {
-        if (e.key === 'Tab') {
-          e.preventDefault();
-          // Manually insert a tab character at the caret position
-          document.execCommand('insertText', false, '\t');
-        }
-      });
-  
-      // Event listener for form input (chosen-value)
-      var inputField = document.querySelector('.chosen-value');
-      inputField.addEventListener('input', function () {
-        updateCode();
-      });
-  
-      // Initial code highlighting
-      updateCode();
-    });
-  
-    const inputField = document.querySelector('.chosen-value');
-    const dropdown = document.querySelector('.value-list');
-    const dropdownArray = [...document.querySelectorAll('li')];
-    console.log(typeof dropdownArray);
-    inputField.focus(); // Demo purposes only
-    let valueArray = [];
-    dropdownArray.forEach(item => {
-      valueArray.push(item.textContent);
-    });
+// Function to update highlighted code
+var updateCode = function () {
+	var language = document.querySelector('#languageForm .select-value').value.toLowerCase();
+	var code = codeEditor.innerText;
 
-    inputField.addEventListener('focus', () => {
-    inputField.placeholder = 'Type to filter';
-    dropdown.classList.add('open');
-    dropdownArray.forEach(dropdown => {
-      dropdown.classList.remove('closed');
-    });
-    });
+	// Highlight code using Prism or any other syntax highlighter
+	codeOutput.innerHTML = Prism.highlight(code, Prism.languages[language], language);
+};
 
-    const closeDropdown = () => {
-      dropdown.classList.remove('open');
-    }
-  
-    inputField.addEventListener('input', () => {
-      dropdown.classList.add('open');
-      let inputValue = inputField.value.toLowerCase();
-      let valueSubstring;
-      if (inputValue.length > 0) {
-        for (let j = 0; j < valueArray.length; j++) {
-          if (!(inputValue.substring(0, inputValue.length) === valueArray[j].substring(0, inputValue.length).toLowerCase())) {
-            dropdownArray[j].classList.add('closed');
-          } else {
-            dropdownArray[j].classList.remove('closed');
-          }
-        }
-      } else {
-        for (let i = 0; i < dropdownArray.length; i++) {
-          dropdownArray[i].classList.remove('closed');
-        }
-      }
-    });
-  
-    dropdownArray.forEach(item => {
-      item.addEventListener('click', (evt) => {
-        inputField.value = item.textContent;
-        dropdownArray.forEach(dropdown => {
-          dropdown.classList.add('closed');
-        });
-      });
-    })
-  
-    inputField.addEventListener('focus', () => {
-      inputField.placeholder = 'Type to filter';
-      dropdown.classList.add('open');
-      dropdownArray.forEach(dropdown => {
-        dropdown.classList.remove('closed');
-      });
-    });
-  
-    inputField.addEventListener('blur', () => {
-      inputField.placeholder = 'Select Language';
-      dropdown.classList.remove('open');
-    });
-  
-    document.addEventListener('click', (evt) => {
-      const isDropdown = dropdown.contains(evt.target);
-      const isInput = inputField.contains(evt.target);
-      if (!isDropdown && !isInput) {
-        dropdown.classList.remove('open');
-      }
-    });
-  </script>
-  
+// Event listener for code editor
+codeEditor.addEventListener('input', updateCode);
+
+// Event listener for handling tab key
+codeEditor.addEventListener('keydown', function (e) {
+	if (e.key === 'Tab') {
+		e.preventDefault();
+		// Manually insert a tab character at the caret position
+		document.execCommand('insertText', false, '\t');
+	}
+});
+
+// Event listener for form input (select-value)
+var inputField = document.querySelector('#languageForm .select-value');
+inputField.addEventListener('input', function () {
+	updateCode();
+});
+
+// Initial code highlighting
+updateCode();
+});
+
+const taskForm = document.querySelector('#taskForm .select-value');
+const languageForm = document.querySelector('#languageForm .select-value');
+const dropdowns = document.querySelectorAll('.value-list');
+
+[taskForm, languageForm].forEach((inputField, index) => {
+	const form = inputField.closest('form');
+	const dropdown = form.querySelector('.value-list');
+	const dropdownArray = [...dropdown.querySelectorAll('li')];
+	let valueArray = [];
+
+	dropdownArray.forEach(item => {
+		valueArray.push(item.textContent);
+	});
+
+inputField.addEventListener('focus', () => {
+	inputField.placeholder = 'Type to filter';
+	dropdown.classList.add('open');
+	dropdownArray.forEach(dropdown => {
+		dropdown.classList.remove('closed');
+	});
+});
+
+const closeDropdown = () => {
+	dropdown.classList.remove('open');
+}
+
+inputField.addEventListener('input', () => {
+	dropdown.classList.add('open');
+	let inputValue = inputField.value.toLowerCase();
+	let valueSubstring;
+	if (inputValue.length > 0) {
+		for (let j = 0; j < valueArray.length; j++) {
+			if (!(inputValue.substring(0, inputValue.length) === valueArray[j].substring(0, inputValue.length).toLowerCase())) {
+				dropdownArray[j].classList.add('closed');
+			} else {
+				dropdownArray[j].classList.remove('closed');
+			}
+		}
+	} else {
+		for (let i = 0; i < dropdownArray.length; i++) {
+			dropdownArray[i].classList.remove('closed');
+		}
+	}
+});
+
+dropdownArray.forEach(item => {
+	item.addEventListener('click', (evt) => {
+		inputField.value = item.textContent;
+		dropdownArray.forEach(dropdown => {
+			dropdown.classList.add('closed');
+		});
+
+	if (inputField === taskForm) {
+		console.log(`Selected task: ${item.textContent}`);
+	} else if (inputField === languageForm) {
+		console.log(`Selected language: ${item.textContent}`);
+	}
+	});
+});
+
+inputField.addEventListener('focus', () => {
+	inputField.placeholder = 'Type to filter';
+	dropdown.classList.add('open');
+	dropdownArray.forEach(dropdown => {
+		dropdown.classList.remove('closed');
+	});
+});
+
+inputField.addEventListener('blur', () => {
+	inputField.placeholder = 'Select Language';
+	dropdown.classList.remove('open');
+});
+
+document.addEventListener('click', (evt) => {
+	const isDropdown = dropdown.contains(evt.target);
+	const isInput = inputField.contains(evt.target);
+	if (!isDropdown && !isInput) {
+		dropdown.classList.remove('open');
+	}
+});
+});
+</script>
