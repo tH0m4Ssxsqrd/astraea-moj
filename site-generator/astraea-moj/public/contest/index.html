@@ -44,7 +44,7 @@
         <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Contest Page"/>
 <meta name="twitter:description" content="$NAME em $CLASS $TASK Problemas: A - Testa Primo B - Exponenciação Modular Enviar solução: A B C D F G H I c cpp java javascript kotlin python riscv rust "/>
 
-    <link rel="stylesheet" href="/style.min.5aed8a736bead0793fbce28353970ecc2edbaae13db23983bf45d20b0545934ef2e58c177bcde5415de8ad28a4092387c753c1e854195b309a602fe112eee02a.css" integrity="sha512-Wu2Kc2vq0Hk/vOKDU5cOzC7bquE9sjmDv0XSCwVFk07y5YwXe83lQV3orSikCSOHx1PB6FQZWzCaYC/hEu7gKg==">
+    <link rel="stylesheet" href="/style.min.fae245b6ce34259555eab2b011d31eb69cfeb04f46398e9c82df62439ad6edea66fa04d14a95b4bbf3ce9679be82b4badfed247f9962c2af62f53d0f389b424f.css" integrity="sha512-&#43;uJFts40JZVV6rKwEdMetpz&#43;sE9GOY6cgt9iQ5rW7epm&#43;gTRSpW0u/POlnm&#43;grS63&#43;0kf5liwq9i9T0POJtCTw==">
 
 
 
@@ -98,7 +98,43 @@
 
 </head>
 <body>
-        <main><header>
+        <main><style>
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user_tool_container {
+    display: flex;
+    align-items: center;
+}
+
+.toolbox {
+    margin-left: 10px;  
+}
+
+ 
+.user_tool_container {
+    margin-left: auto;
+}
+
+.user_icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 9px;
+}
+
+.user_label {
+    font-size: 12px;
+    color: var(--color-text);
+}
+</style>
+
+<header>
     <div class="brand">
         <div id="sidebar_btn">
             <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
@@ -118,9 +154,21 @@
         </div>
     </div>
 
-    <div class="toolbox">
-        <div id="theme_tool">
-            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    <div class="user_tool_container">
+        <div class="user_icon">
+            <div id="user-icon">
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--color-text);">
+                    <g id="User / User_Circle">
+                        <path id="Vector" d="M17.2166 19.3323C15.9349 17.9008 14.0727 17 12 17C9.92734 17 8.06492 17.9008 6.7832 19.3323M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11C15 12.6569 13.6569 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                <div class="user_label">Guest</div>
+            </div>
+        </div>
+
+        <div class="toolbox">
+            <div id="theme_tool">
+                <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -130,7 +178,7 @@
 </svg>
 
 </svg>
-            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+                <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -140,17 +188,17 @@
 </svg>
 
 </svg>
+            </div>
         </div>
-
-        
-
-        
     </div>
-</header>
-<nav id="navbar" class="pure-menu">
+</header><nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
                     
                         <a href="/" class="pure-menu-link">Home</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contests/" class="pure-menu-link">Contests</a>
                     
                 </li><li class="navbar-item pure-menu-item ">
                     
@@ -170,6 +218,8 @@
 <div id="sidebar" class="close">
     <ul><li>
                     <a href="/">Home</a>
+                </li><li>
+                    <a href="/contests/">Contests</a>
                 </li><li>
                     <a href="/about/">About</a>
                 </li><li>

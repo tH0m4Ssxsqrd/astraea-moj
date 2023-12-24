@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Astraea-MOJ</title>
+    <title>Index on Astraea-MOJ</title>
     <link>https://astraea.squaredfield.com/</link>
-    <description>Recent content in Home on Astraea-MOJ</description>
+    <description>Recent content in Index on Astraea-MOJ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://astraea.squaredfield.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contest</title>
+      <link>https://astraea.squaredfield.com/contests/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://astraea.squaredfield.com/contests/</guid>
+      <description>Placeholder for list of contests </description>
+    </item>
+    
+    <item>
+      <title>Join</title>
+      <link>https://astraea.squaredfield.com/join/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://astraea.squaredfield.com/join/</guid>
+      <description>Wait while you are being redirected </description>
+    </item>
+    
+    <item>
+      <title>Score</title>
+      <link>https://astraea.squaredfield.com/score/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://astraea.squaredfield.com/score/</guid>
+      <description>Placeholder for list of scores </description>
+    </item>
+    
     <item>
       <title>Login</title>
       <link>https://astraea.squaredfield.com/login/</link>
