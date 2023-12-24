@@ -1,0 +1,95 @@
+<style>
+    .credential-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    
+        /* Set width to 100% on screens smaller than 768px (typical mobile devices) */
+        @media (max-width: 767px) {
+        width: 100%;
+        }
+
+        /* Set width to 50% on screens 768px and larger (typical PCs) */
+        @media (min-width: 768px) {
+        width: 50%;
+        }
+    }
+
+    .input-field {
+    font-family: monospace;
+    font-weight: 600;
+    letter-spacing: 2px;
+    height: 3rem;
+    font-size: 1.1rem;
+    background-color: #1e1e1e;
+    transition: .3s ease-in-out;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: white;
+
+    &::-webkit-input-placeholder {
+        color: #333;
+    }
+
+    &:hover {
+        background-color: #2d2d2d;
+        cursor: pointer;
+
+        &::-webkit-input-placeholder {
+            color: #333;
+        }
+    }
+
+    &:focus,
+    &.open {
+        box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2);
+        outline: 0;
+        background-color: #2d2d2d;
+        color: #ededed9b;
+
+        &::-webkit-input-placeholder {
+            color: #000;
+        }
+    }
+}
+    .login-button {
+        font-family: monospace;
+        font-weight: 600;
+        letter-spacing: 2px;
+        height: 3rem;
+        font-size: 1.1rem;
+        background-color: #4CAF50; /* Green color for the button, adjust as needed */
+        color: #fff; /* White text color for better visibility */
+        border: none;
+        border-radius: 5px;
+        width: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-bottom: 10px;
+        position: relative;
+        bottom: 25px;
+
+        @media (max-width: 767px) {
+        align-self: center;
+    }
+    }
+
+    .login-button:hover {
+        background-color: #38923c;
+    }
+
+</style>
+
+<div class="credential-container">
+    <input id="email" class="input-field" type="text" placeholder="email">
+    <input id="password" class="input-field" type="password" placeholder="password">
+    <div style="text-align: right; align-self: flex-end; position: relative; bottom: 10px;">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Forgot password?</a>
+    </div>
+    <button class="login-button">Login</button>
+
+</div>
+

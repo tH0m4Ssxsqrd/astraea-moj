@@ -16,12 +16,13 @@
 
 <!DOCTYPE html>
 <html lang='en-us'><head>
-	<meta name="generator" content="Hugo 0.121.1">
     <meta charset="utf-8">
     <link rel="shortcut icon" href='https://astraea.squaredfield.com/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Astraea-MOJ</title>
+    <title>Login - Astraea-MOJ</title>
 
+    
+    <meta name="description" content="Log in with your email and password" />
     
 
     
@@ -31,17 +32,19 @@
     
 
     
-        <meta property="og:title" content="Home" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://astraea.squaredfield.com/" />
+        <meta property="og:title" content="Login" />
+<meta property="og:description" content="Log in with your email and password" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://astraea.squaredfield.com/login/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2023-12-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-12-23T00:00:00+00:00" />
 
 
     
 
     
-        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Home"/>
-<meta name="twitter:description" content=""/>
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Login"/>
+<meta name="twitter:description" content="Log in with your email and password"/>
 
     <link rel="stylesheet" href="/style.min.5aed8a736bead0793fbce28353970ecc2edbaae13db23983bf45d20b0545934ef2e58c177bcde5415de8ad28a4092387c753c1e854195b309a602fe112eee02a.css" integrity="sha512-Wu2Kc2vq0Hk/vOKDU5cOzC7bquE9sjmDv0XSCwVFk07y5YwXe83lQV3orSikCSOHx1PB6FQZWzCaYC/hEu7gKg==">
 
@@ -131,7 +134,7 @@
     </div>
 </header>
 <nav id="navbar" class="pure-menu">
-    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item active">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
                     
                         <a href="/" class="pure-menu-link">Home</a>
                     
@@ -174,122 +177,106 @@
         
         
     
-    <table class="mc-table">
-<thead>
-<tr>
-<th>Contest Name</th>
-<th>Start</th>
-<th>Ends</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[UnB-Gama/EDA2-2023_2 Team RIBAS and JOHN] Trabalho - 🐭 MICROMOUSE 🐭</td>
-<td>Início: Fri Dec 8 18:00:00 -03 2023</td>
-<td>Término:  Wed Dec 20 23:00:00 -03 2023</td>
-<td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Join</a></td>
-<td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Score</a></td>
-</tr>
-<tr>
-<td>[UnB-Gama] [FAC-T02 2023/2] Formativa 3 - Aritmética computacional</td>
-<td>Início: Tue Oct 31 12:00:00 -03 2023</td>
-<td>Término:  Wed Dec 20 23:59:00 -03 2023</td>
-<td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&amp;pp">Join</a></td>
-<td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Score</a></td>
-</tr>
-</tbody>
-</table>
+    <h4 id="log-in-with-your-username-and-password">Log in with your username and password:</h4>
+<style>
+    .credential-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    
+         
+        @media (max-width: 767px) {
+        width: 100%;
+        }
+
+         
+        @media (min-width: 768px) {
+        width: 50%;
+        }
+    }
+
+    .input-field {
+    font-family: monospace;
+    font-weight: 600;
+    letter-spacing: 2px;
+    height: 3rem;
+    font-size: 1.1rem;
+    background-color: #1e1e1e;
+    transition: .3s ease-in-out;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: white;
+
+    &::-webkit-input-placeholder {
+        color: #333;
+    }
+
+    &:hover {
+        background-color: #2d2d2d;
+        cursor: pointer;
+
+        &::-webkit-input-placeholder {
+            color: #333;
+        }
+    }
+
+    &:focus,
+    &.open {
+        box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2);
+        outline: 0;
+        background-color: #2d2d2d;
+        color: #ededed9b;
+
+        &::-webkit-input-placeholder {
+            color: #000;
+        }
+    }
+}
+    .login-button {
+        font-family: monospace;
+        font-weight: 600;
+        letter-spacing: 2px;
+        height: 3rem;
+        font-size: 1.1rem;
+        background-color: #4CAF50;  
+        color: #fff;  
+        border: none;
+        border-radius: 5px;
+        width: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-bottom: 10px;
+        position: relative;
+        bottom: 25px;
+
+        @media (max-width: 767px) {
+        align-self: center;
+    }
+    }
+
+    .login-button:hover {
+        background-color: #38923c;
+    }
+
+</style>
+
+<div class="credential-container">
+    <input id="email" class="input-field" type="text" placeholder="email">
+    <input id="password" class="input-field" type="password" placeholder="password">
+    <div style="text-align: right; align-self: flex-end; position: relative; bottom: 10px;">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Forgot password?</a>
+    </div>
+    <button class="login-button">Login</button>
+
+</div>
+
+
 
 </article>
 </div>
-
-
-
-
-
-<div class="postcard-layout content-margin">
-    
-        <a href="https://astraea.squaredfield.com/login/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Login</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Log in with your username and password: Forgot password? Login </span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2023/12/23 · 
-    
-
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="https://astraea.squaredfield.com/contest/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Contest Page</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>$NAME em $CLASS $TASK Problemas: A - Testa Primo B - Exponenciação Modular Enviar solução: A B C D F G H I c cpp java javascript kotlin python riscv rust </span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2023/12/20 · 
-    
-
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="https://astraea.squaredfield.com/faq/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>FAQ</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Q: What programming language? A: Check the problem&amp;rsquo;s statement for the name of the expected file. If the file ends in .c, it is C. If the file stem is .cpp, then it&amp;rsquo;s C&#43;&#43;, and so on and so forth. Q: I&amp;rsquo;m getting a &amp;ldquo;Runtime Error&amp;rdquo; result from the judge. A: A common cause for that is forgetting to return 0 at the end of your main function. Online judges check if your program finished successfully, and a return different from 0 means an error ocurred.</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2023/12/19 · 
-    
-
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="https://astraea.squaredfield.com/about/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>About</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>What is this fork? The goal: CD-MOJ is going to be a complete rewrite of original CD-MOJ, that is supposed to retain utilization compatibility with the original project as much as possible. That means the way contests are created should be virtually the same, and the external APIs should work the same, say for the MOJinho bot that is able to retrieve information from the running instance.
-What can be improved with this fork: There are a few points that I believe can receive improvements, so I&amp;rsquo;ll list a few:</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2023/11/16 · 
-    
-
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-    
-</div>
-
-
-
-
 
 
                 
