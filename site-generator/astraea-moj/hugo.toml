@@ -34,18 +34,25 @@ url = "/"
 weight = -100
 
 [[menu.navbar]]
+identifier = "contests"
+name = "Contests"
+title = "Contests"
+url = "/contests/"
+weight = -99
+
+[[menu.navbar]]
 identifier = "about"
 name = "About"
 title = "About"
 url = "/about/"
-weight = -99
+weight = -98
 
 [[menu.navbar]]
 identifier = "faq"
 name = "FAQ"
 title = "FAQ"
 url = "/faq/"
-weight = -98
+weight = -97
 
 [[menu.navbar]]
 identifier = "maratona-de-programacao"
