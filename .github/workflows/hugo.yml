@@ -57,6 +57,7 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
+            --config site-generator/astraea-moj/config.toml \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
