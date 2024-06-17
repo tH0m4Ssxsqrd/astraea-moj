@@ -231,6 +231,45 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		var codeEditor = document.getElementById('code-editor');
 		var codeOutput = document.getElementById('code-output');
+		var languageForm = document.querySelector('#languageForm .select-value');
+
+		const fileExtensionMap = {
+			'c': 'c',
+			'cpp': 'cpp',
+			'java': 'java',
+			'js': 'javascript',
+			'kt': 'kotlin',
+			'py': 'python',
+			'rs': 'rust'
+		};
+
+		codeEditor.addEventListener('dragover', function (e) {
+			e.stopPropagation();
+			e.preventDefault();
+			e.dataTransfer.dropEffect = 'copy';
+		});
+
+		codeEditor.addEventListener('drop', function (e) {
+			e.stopPropagation();
+			e.preventDefault();
+
+			let file = e.dataTransfer.files[0];
+			if (file) {
+				let reader = new FileReader();
+				reader.onload = function (e) {
+					codeEditor.innerText = e.target.result;
+
+					// Set language based on file extension
+					let extension = file.name.split('.').pop().toLowerCase();
+					let language = fileExtensionMap[extension] || '';
+					if (language) {
+						languageForm.value = language;
+						updateCode();
+					}
+				};
+				reader.readAsText(file);
+			}
+		});
 
 		// Function to update highlighted code
 		var updateCode = function () {
