@@ -3,8 +3,6 @@ languageCode = 'en-us'
 title = 'Astraea-MOJ'
 author = "Thomas Q"
 
-theme = 'hugo-theme-monochrome'
-
 [markup.highlight]
 codeFences = true
 lineNos = true
