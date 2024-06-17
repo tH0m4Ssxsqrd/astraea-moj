@@ -2,72 +2,109 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Index on Astraea-MOJ</title>
-    <link>https://astraea.squaredfield.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Index on Astraea-MOJ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://astraea.squaredfield.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>logout</title>
+      <link>http://localhost:1313/logout/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/logout/</guid>
+      <description> Logging out. See you soon! </description>
+    </item>
+    
+    <item>
+      <title>User</title>
+      <link>http://localhost:1313/user/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/user/</guid>
+      <description>Hello $USER! Do you wish to log out? logout</description>
+    </item>
+    
     <item>
       <title>Contest</title>
-      <link>https://astraea.squaredfield.com/contests/</link>
+      <link>http://localhost:1313/contests/</link>
       <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://astraea.squaredfield.com/contests/</guid>
-      <description>Placeholder for list of contests </description>
+      <guid>http://localhost:1313/contests/</guid>
+      <description> Placeholder for list of contests </description>
     </item>
     
     <item>
       <title>Join</title>
-      <link>https://astraea.squaredfield.com/join/</link>
+      <link>http://localhost:1313/join/</link>
       <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://astraea.squaredfield.com/join/</guid>
-      <description>Wait while you are being redirected </description>
+      <guid>http://localhost:1313/join/</guid>
+      <description> Wait while you are being redirected </description>
     </item>
     
     <item>
       <title>Score</title>
-      <link>https://astraea.squaredfield.com/score/</link>
+      <link>http://localhost:1313/score/</link>
       <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://astraea.squaredfield.com/score/</guid>
-      <description>Placeholder for list of scores </description>
+      <guid>http://localhost:1313/score/</guid>
+      <description> Placeholder for list of scores </description>
     </item>
     
     <item>
       <title>Login</title>
-      <link>https://astraea.squaredfield.com/login/</link>
+      <link>http://localhost:1313/login/</link>
       <pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://astraea.squaredfield.com/login/</guid>
-      <description>Log in with your username and password: Forgot password? Login </description>
+      <guid>http://localhost:1313/login/</guid>
+      <description>Log in with your username and password: Login Forgot password? ( O login é user@example.com e a senha é 123 )</description>
     </item>
     
     <item>
       <title>Contest Page</title>
-      <link>https://astraea.squaredfield.com/contest/</link>
+      <link>http://localhost:1313/contest/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://astraea.squaredfield.com/contest/</guid>
-      <description>$NAME em $CLASS $TASK Problemas: A - Testa Primo B - Exponenciação Modular Enviar solução: A B C D F G H I c cpp java javascript kotlin python riscv rust </description>
+      <guid>http://localhost:1313/contest/</guid>
+      <description> $NAME em $CLASS $TASK Problemas: A - Testa Primo B - Exponenciação Modular Enviar solução: A B C D F G H I c cpp java javascript kotlin python riscv rust </description>
     </item>
     
     <item>
       <title>FAQ</title>
-      <link>https://astraea.squaredfield.com/faq/</link>
+      <link>http://localhost:1313/faq/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://astraea.squaredfield.com/faq/</guid>
+      <guid>http://localhost:1313/faq/</guid>
       <description>Q: What programming language? A: Check the problem&amp;rsquo;s statement for the name of the expected file. If the file ends in .c, it is C. If the file stem is .cpp, then it&amp;rsquo;s C++, and so on and so forth. Q: I&amp;rsquo;m getting a &amp;ldquo;Runtime Error&amp;rdquo; result from the judge. A: A common cause for that is forgetting to return 0 at the end of your main function. Online judges check if your program finished successfully, and a return different from 0 means an error ocurred.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://astraea.squaredfield.com/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://astraea.squaredfield.com/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>What is this fork? The goal: CD-MOJ is going to be a complete rewrite of original CD-MOJ, that is supposed to retain utilization compatibility with the original project as much as possible. That means the way contests are created should be virtually the same, and the external APIs should work the same, say for the MOJinho bot that is able to retrieve information from the running instance.
 What can be improved with this fork: There are a few points that I believe can receive improvements, so I&amp;rsquo;ll list a few:</description>
+    </item>
+    
+    <item>
+      <title>CodeForces 1346</title>
+      <link>http://localhost:1313/codeforces-1346/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/codeforces-1346/</guid>
+      <description>Enviar Solução A. B. &amp;hellip; H. I. Pac-Man 2.0 time limit per test: 3 seconds memory limit per test: 256 megabytes input: standard input output: standard output Polycarp is developing a new version of an old video game &amp;ldquo;Pac-Man&amp;rdquo;. Though he really enjoyed playing the original game, he didn&amp;rsquo;t like some aspects of it, so he decided to alter the rules a bit. In Polycarp&amp;rsquo;s version, you play as Pac-Man and you have to collect pellets scattered over the game world while avoiding dangerous ghosts (no difference from the original yet).</description>
+    </item>
+    
+    <item>
+      <title>Feed</title>
+      <link>http://localhost:1313/main-feed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/main-feed/</guid>
+      <description> Current contests being held: Contest Name Start Ends CodeForces - 1346 Início: Fri Jun 14 22:30:00 -03 2024 Término: Sun Jul 7 23:59:00 -03 2024 Join Score </description>
     </item>
     
   </channel>

@@ -7,3 +7,5 @@ toc = false
 +++
 #### Log in with your username and password:
 {{< login-prompt >}}
+
+( O login é *user@example.com* e a senha é *123* )

@@ -1,0 +1,55 @@
+<style>
+    .prompt-for-login {
+        max-width: 50%;
+        display: inline-block;
+        white-space: normal;
+    }
+
+    .prompt-prefix {
+        color: #4CAF50;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .button-link-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 20px;
+        gap: 10px;
+        position: relative;
+        left: 1.5rem;
+    }
+
+    .login-button {
+        font-family: monospace;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 1.1rem;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.8rem;
+        text-decoration: none;
+        display: inline-block;
+        white-space: normal;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        text-align: center;
+        box-sizing: border-box;
+        max-width: 35%;
+    }
+
+    .login-button:hover {
+        background-color: #38923c;
+    }
+</style>
+
+<div class="button-link-container">
+    <pre class="prompt-for-login" tabindex="0">
+        <span class="prompt-prefix">~></span> Faça login e veja os exercícios escolhidos para você!
+    </pre>
+    <a href="/login" class="login-button">Cadastre-se ou faça Login</a>
+</div>

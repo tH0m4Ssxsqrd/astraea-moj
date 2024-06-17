@@ -1,10 +1,8 @@
 +++
-title = "Index"
+title = "Feed"
 toc = false
 type = "blank"
 +++
-
-{{< prompt-for-login >}}
 
 ## Current contests being held:
 | Contest Name                                                         | Start                                | Ends                                   |      |       |
@@ -21,9 +19,3 @@ type = "blank"
 | [UnB-Gama] [EDA2 2024/1] Formativa 4 - Árvores                         | Início: Mon May 20 08:00:00 -03 2024 | Término: Sun Jun 16 23:59:00 -03 2024  | [Join](/join) | [Score](/score) |
 | [UnB-Gama/APC-T11/2024-1] 5a Lista de Exercícios                       | Início: Thu May 2 14:00:00 -03 2024  | Término: Mon Jul 1 23:59:00 -03 2024   | [Join](/join) | [Score](/score) |
 | [UnB-Gama] [EDA2 2024/1] Listão (não vale nota)                        | Início: Thu Apr 18 11:30:00 -03 2024 | Término: Mon Jul 15 23:59:00 -03 2024  | [Join](/join) | [Score](/score) |
-
-## Links:
-
-[Link to Contest](/contest)
-
-[Link to login](/login)
