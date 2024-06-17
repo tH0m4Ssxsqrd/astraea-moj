@@ -1,0 +1,299 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 98vh;
+    }
+
+    .main-content {
+        flex: 1;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang='en-us'><head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join - Astraea-MOJ</title>
+
+    
+    <meta name="description" content="Join a contest given token and contest ID" />
+    
+
+    
+
+    
+    <meta name="author" content="thomasq" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/join/">
+  <meta property="og:site_name" content="Astraea-MOJ">
+  <meta property="og:title" content="Join">
+  <meta property="og:description" content="Join a contest given token and contest ID">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2023-12-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-12-24T00:00:00+00:00">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Join">
+  <meta name="twitter:description" content="Join a contest given token and contest ID">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main-content"><style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .user_tool_container {
+        display: flex;
+        align-items: center;
+    }
+
+    .toolbox {
+        margin-left: 10px;
+    }
+
+    .user_tool_container {
+        margin-left: auto;
+    }
+
+    .user_icon {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        top: 8px;
+        font-size: 12px;
+        color: var(--color-text);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-text-secondary);
+        }
+    }
+
+    .user_label {
+        font-size: 12px;
+        color: var(--color-text);
+    }
+</style>
+
+<header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                        <a href="/">Home</a></li><li>
+                        <a href="/contests/">Contests</a></li><li>
+                        <a href="/about/">About</a></li><li>
+                        <a href="/faq/">FAQ</a></li><li>
+                        <a href="https://maratona.sbc.org.br/">Maratona de Programação</a></li></ul>
+            </div>
+        </div>
+
+        <div class="brand">
+            <div>
+                <a href="/">Astraea-MOJ</a>
+            </div>
+        </div>
+    </div>
+    <div class="user_tool_container">
+        <a class="user_icon" href="/user">
+            <div id="user-icon">
+                <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="User / User_Circle">
+                        <path id="Vector"
+                            d="M17.2166 19.3323C15.9349 17.9008 14.0727 17 12 17C9.92734 17 8.06492 17.9008 6.7832 19.3323M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11C15 12.6569 13.6569 14 12 14Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                </svg>
+                <div class="user_label">Guest</div>
+            </div>
+        </a>
+        <div class="toolbox">
+            <div id="theme_tool">
+                <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+                <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+            </div>
+
+            
+        </div>
+    </div>
+</header><nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">Home</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contests/" class="pure-menu-link">Contests</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/about/" class="pure-menu-link">About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/faq/" class="pure-menu-link">FAQ</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="https://maratona.sbc.org.br/" class="pure-menu-link">Maratona de Programação</a>
+                    
+                </li></ul>
+</nav>
+<div id="content" class="content-margin">
+                
+
+
+    <div class="content-margin">
+
+
+
+<article class="line-numbers">
+    
+    
+        
+        
+    
+    
+<h2 id="wait-while-you-are-being-redirected" class="header-anchor-wrapper">Wait while you are being redirected
+  <a href="#wait-while-you-are-being-redirected" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+
+</article>
+</div>
+
+
+                
+                
+                
+            </div>
+        </main>
+<footer>
+    <article>Copyright © 2024 by tH0m4Ssxsqrd</article>
+</footer>
+
+</div>
+</body>
+
+</html>

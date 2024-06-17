@@ -1,0 +1,29 @@
++++
+title = "Index"
+toc = false
+type = "blank"
++++
+
+{{< prompt-for-login >}}
+
+## Current contests being held:
+| Contest Name                                                         | Start                                | Ends                                   |      |       |
+|------------------------------------------------------------------------|--------------------------------------|----------------------------------------|---------------|-----------------|
+| [UnB-Gama/EDA2-2023_2 Team RIBAS and JOHN] Trabalho - 🐭 MICROMOUSE 🐭 | Início: Fri Dec 8 18:00:00 -03 2023  | Término:  Wed Dec 20 23:00:00 -03 2023 | [Join](/join) | [Score](/score) |
+| [UnB-Gama] [FAC-T02 2023/2] Formativa 3 - Aritmética computacional     | Início: Tue Oct 31 12:00:00 -03 2023 | Término:  Wed Dec 20 23:59:00 -03 2023 | [Join](/join) | [Score](/score) |
+| [UnB-Gama/Compiladores-1 2024-1] TRABALHO - Compilador de Pascal       | Início: Sun Jun 16 11:30:00 -03 2024 | Término: Tue Jul 9 23:59:00 -03 2024   | [Join](/join) | [Score](/score) |
+| [UnB-Gama/FLIA 2024-1] 👻 Pacman Mojificado 👻                         | Início: Fri Jun 14 22:30:00 -03 2024 | Término: Sun Jul 7 23:59:00 -03 2024   | [Join](/join) | [Score](/score) |
+| [UnB-Gama/APC-T11/2024-1] 7a Lista de Exercícios (VALE NOTA)           | Início: Mon Jun 10 10:00:00 -03 2024 | Término: Fri Jul 12 10:00:00 -03 2024  | [Join](/join) | [Score](/score) |
+| [UnB-Gama/FAC-T01 2024/1] Trabalho 4                                   | Início: Fri May 31 00:00:00 -03 2024 | Término: Mon Jun 17 23:59:59 -03 2024  | [Join](/join) | [Score](/score) |
+| [UnB-Gama/EDA1-T02-T03/2024-1] 6a Lista de Exercícios (vale nota)      | Início: Tue May 28 15:00:00 -03 2024 | Término: Sun Jun 16 23:59:00 -03 2024  | [Join](/join) | [Score](/score) |
+| [UnB-Gama/APC-T11/2024-1] 6a Lista de Exercícios (VALE NOTA)           | Início: Fri May 24 10:00:00 -03 2024 | Término: Mon Jul 1 23:59:00 -03 2024   | [Join](/join) | [Score](/score) |
+| [UnB-Gama] [APC] LabP2-T12                                             | Início: Wed May 22 11:45:00 -03 2024 | Término: Fri Jun 21 09:59:59 -03 2024  | [Join](/join) | [Score](/score) |
+| [UnB-Gama] [EDA2 2024/1] Formativa 4 - Árvores                         | Início: Mon May 20 08:00:00 -03 2024 | Término: Sun Jun 16 23:59:00 -03 2024  | [Join](/join) | [Score](/score) |
+| [UnB-Gama/APC-T11/2024-1] 5a Lista de Exercícios                       | Início: Thu May 2 14:00:00 -03 2024  | Término: Mon Jul 1 23:59:00 -03 2024   | [Join](/join) | [Score](/score) |
+| [UnB-Gama] [EDA2 2024/1] Listão (não vale nota)                        | Início: Thu Apr 18 11:30:00 -03 2024 | Término: Mon Jul 15 23:59:00 -03 2024  | [Join](/join) | [Score](/score) |
+
+## Links:
+
+[Link to Contest](/contest)
+
+[Link to login](/login)

@@ -1,0 +1,564 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 98vh;
+    }
+
+    .main-content {
+        flex: 1;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang='en-us'><head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodeForces 1346 - Astraea-MOJ</title>
+
+    
+    <meta name="description" content="See full list of contests held" />
+    
+
+    
+
+    
+    <meta name="author" content="thomasq" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/codeforces-1346/">
+  <meta property="og:site_name" content="Astraea-MOJ">
+  <meta property="og:title" content="CodeForces 1346">
+  <meta property="og:description" content="See full list of contests held">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CodeForces 1346">
+  <meta name="twitter:description" content="See full list of contests held">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main-content"><style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .user_tool_container {
+        display: flex;
+        align-items: center;
+    }
+
+    .toolbox {
+        margin-left: 10px;
+    }
+
+    .user_tool_container {
+        margin-left: auto;
+    }
+
+    .user_icon {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        top: 8px;
+        font-size: 12px;
+        color: var(--color-text);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-text-secondary);
+        }
+    }
+
+    .user_label {
+        font-size: 12px;
+        color: var(--color-text);
+    }
+</style>
+
+<header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                        <a href="/">Home</a></li><li>
+                        <a href="/contests/">Contests</a></li><li>
+                        <a href="/about/">About</a></li><li>
+                        <a href="/faq/">FAQ</a></li><li>
+                        <a href="https://maratona.sbc.org.br/">Maratona de Programação</a></li></ul>
+            </div>
+        </div>
+
+        <div class="brand">
+            <div>
+                <a href="/">Astraea-MOJ</a>
+            </div>
+        </div>
+    </div>
+    <div class="user_tool_container">
+        <a class="user_icon" href="/user">
+            <div id="user-icon">
+                <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="User / User_Circle">
+                        <path id="Vector"
+                            d="M17.2166 19.3323C15.9349 17.9008 14.0727 17 12 17C9.92734 17 8.06492 17.9008 6.7832 19.3323M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11C15 12.6569 13.6569 14 12 14Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                </svg>
+                <div class="user_label">Guest</div>
+            </div>
+        </a>
+        <div class="toolbox">
+            <div id="theme_tool">
+                <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+                <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+            </div>
+
+            
+        </div>
+    </div>
+</header><nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">Home</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contests/" class="pure-menu-link">Contests</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/about/" class="pure-menu-link">About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/faq/" class="pure-menu-link">FAQ</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="https://maratona.sbc.org.br/" class="pure-menu-link">Maratona de Programação</a>
+                    
+                </li></ul>
+</nav>
+<div id="content" class="content-margin">
+                
+
+
+    <div class="content-margin">
+
+
+
+<article class="line-numbers">
+    
+    
+        
+        
+    
+    <style>
+    .login-button {
+        font-family: monospace;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 1.1rem;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.8rem;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        max-width: 300px;
+        z-index: 1000;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .login-button:hover {
+        background-color: #38923c;
+    }
+</style>
+
+<a href="/contest" class="login-button">Enviar Solução</a>
+
+<h1 id="a" class="header-anchor-wrapper">A.
+  <a href="#a" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+
+<h1 id="b" class="header-anchor-wrapper">B.
+  <a href="#b" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+
+<h1 id="heading" class="header-anchor-wrapper">&hellip;
+  <a href="#heading" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+
+<h1 id="h" class="header-anchor-wrapper">H.
+  <a href="#h" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+
+<h1 id="i-pac-man-20" class="header-anchor-wrapper">I. Pac-Man 2.0
+  <a href="#i-pac-man-20" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+<ul>
+<li><strong>time limit per test:</strong> <code>3 seconds</code></li>
+<li><strong>memory limit per test:</strong> <code>256 megabytes</code></li>
+<li><strong>input:</strong> <code>standard input</code></li>
+<li><strong>output:</strong> <code>standard output</code></li>
+</ul>
+<p>Polycarp is developing a new version of an old video game &ldquo;Pac-Man&rdquo;. Though he really enjoyed playing the original game, he didn&rsquo;t like some aspects of it, so he decided to alter the rules a bit.
+In Polycarp&rsquo;s version, you play as Pac-Man and you have to collect pellets scattered over the game world while avoiding dangerous ghosts (no difference from the original yet). Polycarp didn&rsquo;t like the fact that there was no escape from the ghosts in the original, so, in his version, the game world is divided into n safe zones with m one-directional pathways between them — and it is guaranteed that Pac-Man can reach any safe zone from any other. Since safe zones are safe, the ghosts cannot attack Pac-Man while it is there, it is in danger only while traversing the pathways. Pac-Man starts the game in the safe zone s.</p>
+<p>All pellets are scattered over the safe zones; initially, the i-th safe zone contains ai pellets (and if Pac-Man is in a safe zone, it may freely collect all the pellets in it). The pellets disappear after being collected, but after the last pellet in the game world is collected, new pellets spawn in the safe zones in the same quantity as before (ai new pellets spawn in the i-th zone). The pellets can be respawned any number of times, so the game is essentially infinite.</p>
+<p>Polycarp has already determined the structure of the game world and the number of pellets in each safe zone. Now he is trying to find out if the game is difficult enough. There are q goals in the game, the i-th goal is to collect at least Ci pellets from the beginning of the game. Polycarp denotes the difficulty of the i-th goal as the minimum number of times the player has to traverse a one-directional pathway in order to collect Ci pellets (since only traversing a pathway puts Pac-Man in danger). If some pathway is traversed multiple times while Pac-Man is collecting the pellets, it is included in the answer the same number of times.</p>
+<p>Help Polycarp to calculate the difficulty of each goal!</p>
+<hr>
+
+<h2 id="input" class="header-anchor-wrapper">Input:
+  <a href="#input" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>The first line contains four integers n, m, q and s (2≤n≤15; n≤m≤n(n−1); 1≤q≤5000; 1≤s≤n) — the number of safe zones, the number of pathways, the number of goals and the index of the starting safe zone, respectively.</p>
+<p>The second line contains n integers a1, a2, &hellip;, an (1≤ai≤109), where ai is the initial number of pellets in the i-th safe zone (and the number of pellets that spawn in the i-th safe zone when the last pellet in the world is collected).</p>
+<p>Then m lines follow, each line contains two integers vi and ui (1≤vi,ui≤n; vi≠ui) denoting a one-directional pathway from the safe zone vi to the safe zone ui. Each ordered pair (vi,ui) appears in this section at most once (there are no multiple pathways from vi to ui), and it is possible to reach every safe zone from every other safe zone using these pathways.</p>
+<p>The last line contains q integers C1, C2, &hellip;, Cq (1≤Ci≤1015), where Ci is the minimum number of pellets the player has to collect in order to fulfil the i-th goal.</p>
+<hr>
+
+<h2 id="output" class="header-anchor-wrapper">Output:
+  <a href="#output" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>For each goal i, print one integer — its difficulty (the minimum number of times the player has to traverse along some pathway in order to collect at least Ci pellets).</p>
+<hr>
+
+<h1 id="exemplos" class="header-anchor-wrapper">Exemplos:
+  <a href="#exemplos" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+
+<h2 id="input-1" class="header-anchor-wrapper">input
+  <a href="#input-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<pre tabindex="0"><code>3 4 2 1
+3 1 2
+1 2
+2 1
+1 3
+3 1
+5 8
+</code></pre>
+<h2 id="output-1" class="header-anchor-wrapper">output
+  <a href="#output-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<pre tabindex="0"><code>1
+3
+</code></pre><hr>
+
+<h2 id="input-2" class="header-anchor-wrapper">input
+  <a href="#input-2" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<pre tabindex="0"><code>5 7 4 2
+1 3 2 2 1
+2 3
+4 2
+3 4
+3 1
+1 4
+5 4
+4 5
+7 14 23 27
+</code></pre>
+<h2 id="output-2" class="header-anchor-wrapper">output
+  <a href="#output-2" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<pre tabindex="0"><code>2
+6
+10
+13
+</code></pre>
+</article>
+</div>
+
+
+                
+                
+                
+            </div>
+        </main>
+<footer>
+    <article>Copyright © 2024 by tH0m4Ssxsqrd</article>
+</footer>
+
+</div>
+</body>
+
+</html>
