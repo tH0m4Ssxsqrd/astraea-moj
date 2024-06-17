@@ -8,4 +8,4 @@ toc = false
 ## Hello $USER!
 
 #### Do you wish to log out?
-[logout](/logout)
+[logout](/astraea-moj/logout)

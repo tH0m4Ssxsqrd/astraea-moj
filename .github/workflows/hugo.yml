@@ -59,7 +59,7 @@ jobs:
           hugo \
             --config site-generator/astraea-moj/config.toml \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/astraea-moj/"
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
