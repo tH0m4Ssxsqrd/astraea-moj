@@ -25,9 +25,9 @@
     mod
   ));
 
-  // ns-hugo:/home/thomasq/Public/Programing/Rust/astraea-moj/site-generator/astraea-moj/themes/hugo-theme-monochrome/assets/lib/js/zooming-v2.1.1.min.js
+  // ns-hugo:/home/thomasq/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/thmasq/hugo-theme-monochrome@v0.0.0-20240617025746-cad9a1254684/assets/lib/js/zooming-v2.1.1.min.js
   var require_zooming_v2_1_1_min = __commonJS({
-    "ns-hugo:/home/thomasq/Public/Programing/Rust/astraea-moj/site-generator/astraea-moj/themes/hugo-theme-monochrome/assets/lib/js/zooming-v2.1.1.min.js"(exports, module) {
+    "ns-hugo:/home/thomasq/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/thmasq/hugo-theme-monochrome@v0.0.0-20240617025746-cad9a1254684/assets/lib/js/zooming-v2.1.1.min.js"(exports, module) {
       !function(t, e) {
         "object" == typeof exports && "undefined" != typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : (t = t || self).Zooming = e();
       }(exports, function() {

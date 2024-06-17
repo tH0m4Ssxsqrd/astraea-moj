@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'Astraea-MOJ'
 author = "Thomas Q"
 
+[module]
+  [[module.imports]]
+    path = "github.com/thmasq/hugo-theme-monochrome"
+
 [markup.highlight]
 codeFences = true
 lineNos = true
