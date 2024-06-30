@@ -37,29 +37,34 @@
 
     <script>
         const data = [
-            { submissionTime: "2024-06-30T10:00:00Z", task: "A", username: "UserA", language: "Python", status: "Wrong Answer", timeSpent: "120ms", memoryUsage: "500MB", taskOptions: ["Pattern Matching"], statusOptions: ["Completed"] },
-            { submissionTime: "2024-06-30T11:00:00Z", task: "B", username: "UserB", language: "Rust", status: "Accepted", timeSpent: "5ms", memoryUsage: "2MB", taskOptions: ["Graphs"], statusOptions: ["In Progress"] },
-            { submissionTime: "2024-06-30T11:00:00Z", task: "B", username: "UserB", language: "Rust", status: "Judging", timeSpent: "-", memoryUsage: "-", taskOptions: ["Graphs"], statusOptions: ["In Progress"] }
+            { submissionTime: "2024-06-30T10:00:00Z", task: "A", username: "UserA", language: "Python", status: "Wrong Answer", timeSpent: "120ms", memoryUsage: "500MB" },
+            { submissionTime: "2024-06-30T11:00:00Z", task: "B", username: "UserB", language: "Rust", status: "Accepted", timeSpent: "5ms", memoryUsage: "2MB" },
+            { submissionTime: "2024-06-30T11:00:00Z", task: "B", username: "UserB", language: "Rust", status: "Judging", timeSpent: "-", memoryUsage: "-" }
         ];
 
-        function populateFilters() {
+        // Extract unique tasks and statuses
+        const tasks = Array.from(new Set(data.map(item => item.task)));
+        const statuses = Array.from(new Set(data.map(item => item.status)));
+
+        // Populate filters
+        populateFilters(tasks, statuses);
+
+        function populateFilters(tasks, statuses) {
             const taskSelect = document.getElementById('taskFilter');
             const statusSelect = document.getElementById('statusFilter');
 
-            data.forEach(item => {
-                item.taskOptions.forEach(task => {
-                    const option = document.createElement('option');
-                    option.value = task;
-                    option.text = task;
-                    taskSelect.add(option);
-                });
+            tasks.forEach(task => {
+                const option = document.createElement('option');
+                option.value = task;
+                option.text = task;
+                taskSelect.add(option);
+            });
 
-                item.statusOptions.forEach(status => {
-                    const option = document.createElement('option');
-                    option.value = status;
-                    option.text = status;
-                    statusSelect.add(option);
-                });
+            statuses.forEach(status => {
+                const option = document.createElement('option');
+                option.value = status;
+                option.text = status;
+                statusSelect.add(option);
             });
         }
 
@@ -126,17 +131,17 @@
             let filteredData = [...data];
 
             if (taskFilter !== "") {
-                filteredData = filteredData.filter(item => item.taskOptions.includes(taskFilter));
+                filteredData = filteredData.filter(item => item.task === taskFilter);
             }
 
             if (statusFilter !== "") {
-                filteredData = filteredData.filter(item => item.statusOptions.includes(statusFilter));
+                filteredData = filteredData.filter(item => item.status === statusFilter);
             }
 
             renderTable(filteredData);
         }
 
-        populateFilters();
+        populateFilters(tasks, statuses);
         renderTable(data);
     </script>
 
