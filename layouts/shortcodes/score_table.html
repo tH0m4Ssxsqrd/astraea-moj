@@ -1,3 +1,9 @@
+<style>
+    mc-table {
+        width: max-content;
+    }
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +58,9 @@
         function populateFilters(tasks, statuses) {
             const taskSelect = document.getElementById('taskFilter');
             const statusSelect = document.getElementById('statusFilter');
+
+            taskSelect.innerHTML = '<option value="">All Tasks</option>';
+            statusSelect.innerHTML = '<option value="">All Statuses</option>';
 
             tasks.forEach(task => {
                 const option = document.createElement('option');
