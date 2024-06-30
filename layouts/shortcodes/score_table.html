@@ -1,45 +1,61 @@
-<style>
-    mc-table {
-        width: max-content;
-    }
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Dynamic Table</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #taskTable {
+            width: max-content;
+        }
+    </style>
 </head>
 
 <body>
 
-    <select id="taskFilter">
-        <option value="">All Tasks</option>
-    </select>
+    <div class="container">
+        <div class="filters">
+            <select id="taskFilter">
+                <option value="">All Tasks</option>
+            </select>
 
-    <select id="statusFilter">
-        <option value="">All Statuses</option>
-    </select>
+            <select id="statusFilter">
+                <option value="">All Statuses</option>
+            </select>
 
-    <button onclick="applyFilters()">Apply Filters</button>
+            <button onclick="applyFilters()">Apply Filters</button>
+        </div>
 
-    <table id="taskTable" border="1">
-        <thead>
-            <tr>
-                <th onclick="sortTable(0)">Submission Time</th>
-                <th onclick="sortTable(1)">Task</th>
-                <th onclick="sortTable(2)">Username</th>
-                <th onclick="sortTable(3)">Language</th>
-                <th onclick="sortTable(4)">Status</th>
-                <th onclick="sortTable(5)">Time Spent</th>
-                <th onclick="sortTable(6)">Memory Usage</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Rows will be added here dynamically -->
-        </tbody>
-    </table>
+        <table id="taskTable" border="1">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Submission Time</th>
+                    <th onclick="sortTable(1)">Task</th>
+                    <th onclick="sortTable(2)">Username</th>
+                    <th onclick="sortTable(3)">Language</th>
+                    <th onclick="sortTable(4)">Status</th>
+                    <th onclick="sortTable(5)">Time Spent</th>
+                    <th onclick="sortTable(6)">Memory Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
 
     <script>
         const data = [
@@ -48,11 +64,9 @@
             { submissionTime: "2024-06-30T11:00:00Z", task: "B", username: "UserB", language: "Rust", status: "Judging", timeSpent: "-", memoryUsage: "-" }
         ];
 
-        // Extract unique tasks and statuses
         const tasks = Array.from(new Set(data.map(item => item.task)));
         const statuses = Array.from(new Set(data.map(item => item.status)));
 
-        // Populate filters
         populateFilters(tasks, statuses);
 
         function populateFilters(tasks, statuses) {
