@@ -21,6 +21,21 @@
         #taskTable {
             width: max-content;
         }
+
+        .status-wrong-answer {
+            background-color: red;
+            color: white;
+        }
+
+        .status-accepted {
+            background-color: green;
+            color: white;
+        }
+
+        .status-other {
+            background-color: yellow;
+            color: black;
+        }
     </style>
 </head>
 
@@ -67,6 +82,12 @@
         const tasks = Array.from(new Set(data.map(item => item.task)));
         const statuses = Array.from(new Set(data.map(item => item.status)));
 
+        const statusColors = {
+            "Wrong Answer": 'status-wrong-answer',
+            "Accepted": 'status-accepted',
+            "default": 'status-other'
+        };
+
         populateFilters(tasks, statuses);
 
         function populateFilters(tasks, statuses) {
@@ -98,9 +119,15 @@
             data.forEach(row => {
                 const tr = document.createElement('tr');
 
-                Object.values(row).forEach((value, index) => {
+                Object.entries(row).forEach(([key, value]) => {
                     const td = document.createElement('td');
                     td.textContent = value;
+
+                    if (key === 'status') {
+                        const statusClass = statusColors[value] || statusColors["default"];
+                        td.classList.add(statusClass);
+                    }
+
                     tr.appendChild(td);
                 });
 
