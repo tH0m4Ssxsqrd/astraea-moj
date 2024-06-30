@@ -6,3 +6,5 @@ aliases = ["contests"]
 toc = false
 +++
 ## Placeholder for list of contests
+
+Go to [scores](/astraea-moj/score/)
